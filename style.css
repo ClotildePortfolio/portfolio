@@ -1,0 +1,262 @@
+/*
+* Gl4
+* Copyright 2014, jessy robin
+* 21/05/2024
+*/
+
+/* Root
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+:root {
+
+  --c-smokey: #EFF1F6;
+  --c-black: #292B2D;
+  --c-purple: #AC81FD;
+  --c-blue: #5162FD;
+  --c-salomon: #F84A4A;
+  --c-flax: #F6ED67;
+  --c-background: #212121;
+  --c-white: #fff;
+  --c-dark: #000;
+}
+
+/* Grid
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.container {
+  position: relative;
+  width: 80%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* Base Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* NOTE
+html is set to 62.5% so that all the REM measurements throughout Skeleton
+are based on 10px sizing. So basically 1.5rem = 15px :) */
+html {
+  font-size: 62.5%;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+  /* Empêche le défilement horizontal sur le body */
+  overflow-y: hidden;
+  /* Empêche le défilement vertical sur le body */
+}
+
+body {
+  font-size: 1.5em;
+  /* currently ems cause chrome bug misinterpreting rems on body element */
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: var(--c-dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+input,
+button {
+  display: inline-block;
+  height: 38px;
+  padding: 0 30px;
+  color: var(--c-black);
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid var(--c-black);
+  cursor: pointer;
+  box-sizing: border-box;
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+input:focus,
+button:hover {
+  color: var(--c-blue);
+  border-color: var(--c-blue);
+  outline: 0;
+}
+
+/* Images
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+img {
+  width: inherit;
+}
+
+/* Typography
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-weight: 300;
+  color: var(--c-dark);
+}
+
+h1 {
+  font-size: 4.0rem;
+  line-height: 1.2;
+  letter-spacing: -.1rem;
+}
+
+h2 {
+  font-size: 3.6rem;
+  line-height: 1.25;
+  letter-spacing: -.1rem;
+}
+
+h3 {
+  font-size: 3.0rem;
+  line-height: 1.3;
+  letter-spacing: -.1rem;
+}
+
+h4 {
+  font-size: 2.4rem;
+  line-height: 1.35;
+  letter-spacing: -.08rem;
+}
+
+h5 {
+  font-size: 1.8rem;
+  line-height: 1.5;
+  letter-spacing: -.05rem;
+}
+
+h6 {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  letter-spacing: 0;
+}
+
+/* Links
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+a {
+  color: var(--c-blue);
+}
+
+a:hover {
+  color: var(--c-blue);
+}
+
+/* Utilities
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.u-full-width {
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: centers;
+}
+
+.u-max-full-width {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.u-pull-right {
+  float: right;
+}
+
+.u-pull-left {
+  float: left;
+}
+
+.pd-r-5{
+padding-left: 5em;
+}
+
+
+/* Clearing
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* Self Clearing Goodness */
+.container:after,
+.row:after,
+.u-cf {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Customization
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.login {
+  display: flex;
+  height: 100vh;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+.login h1 {
+  text-align: center;
+}
+
+/* Conteneur principal */
+.row {
+  display: flex;
+  height: 100vh;
+  /* Hauteur de la fenêtre */
+  overflow-x: auto;
+  /* Permet le défilement horizontal */
+  white-space: nowrap;
+  /* Empêche le passage des éléments à la ligne */
+  scroll-behavior: smooth;
+  /* Défilement fluide */
+}
+
+/* Sections */
+.section {
+  flex: none;
+  /* Empêche les sections de s'étirer */
+  text-align: center;
+  /* Centre le contenu textuel dans chaque section */
+  animation: backInRight; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; /* don't forget to set a duration! */
+}
+
+/* Images */
+.section img {
+  height: 100vh;
+  /* Prend toute la hauteur de la fenêtre */
+  width: auto;
+  /* Garde les proportions de l'image */
+  display: block;
+  margin-right: 3em;
+}
+
+.C {
+  background-color: #f7f7f7;
+}
+
+.A {
+  background-color: #5d5d5b;
+}
+
+.B {
+  background-color: #eaeaea;
+}
+
+

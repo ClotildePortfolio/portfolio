@@ -1,0 +1,59 @@
+<html lang="en">
+<head>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <link rel="stylesheet" href="style.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="login">
+                <h1>Connexion</h1>
+		<input id="password" type="password" placeholder="Mot de passe" /> <br />
+		<button id="loginbutton" type="button">Entrée</button>
+		<p id="wrongPassword" style="display: none">Mot de pass incorrect</p>
+            </div>
+        </div>
+    </div>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script type="text/javascript" src="https://rawcdn.githack.com/chrisveness/crypto/7067ee62f18c76dd4a9d372a00e647205460b62b/sha1.js"></script>
+<script type="text/javascript">
+    "use strict";
+    function loadPage(pwd) {
+        var hash = pwd;
+        hash = Sha1.hash(pwd);
+        var url = hash + "/clo.html";
+        $.ajax({
+            url: url,
+            dataType: "html",
+            success: function (data) {
+                window.location = url;
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                parent.location.hash = hash;
+                //$("#wrongPassword").show();
+                $("#password").attr("placeholder", "mot de passe incorrect");
+                $("#password").val("");
+            }
+        });
+    }
+    $("#loginbutton").on("click", function () {
+        loadPage($("#password").val());
+    });
+    $("#password").keypress(function (e) {
+        if (e.which == 13) {
+            loadPage($("#password").val());
+        }
+    });
+    $("#password").focus();
+</script>
+
+</body>
+</html>
