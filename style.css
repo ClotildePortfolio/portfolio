@@ -171,6 +171,10 @@ a:hover {
 .u-max-full-width {
   max-width: 100%;
   box-sizing: border-box;
+  object-fit: contain;
+  /* Conserve les proportions de l'image sans la déformer */
+  object-position: center;
+  /* Centre l'image dans la section */
 }
 
 .u-pull-right {
@@ -181,8 +185,8 @@ a:hover {
   float: left;
 }
 
-.pd-r-5{
-padding-left: 5em;
+.pd-r-5 {
+  padding-left: 3em;
 }
 
 
@@ -233,8 +237,6 @@ padding-left: 5em;
   /* Empêche les sections de s'étirer */
   text-align: center;
   /* Centre le contenu textuel dans chaque section */
-  animation: backInRight; /* referring directly to the animation's @keyframe declaration */
-  animation-duration: 2s; /* don't forget to set a duration! */
 }
 
 /* Images */
@@ -245,6 +247,38 @@ padding-left: 5em;
   /* Garde les proportions de l'image */
   display: block;
   margin-right: 3em;
+}
+
+.head {
+  flex: none;
+  /* Empêche les sections de s'étirer */
+  text-align: center;
+  /* Centre le contenu textuel dans chaque section */
+}
+
+/* Images */
+.head img {
+  height: 100vh;
+  /* Prend toute la hauteur de la fenêtre */
+  width: auto;
+  /* Garde les proportions de l'image */
+  display: block;
+}
+
+.foot {
+  flex: none;
+  /* Empêche les sections de s'étirer */
+  text-align: center;
+  /* Centre le contenu textuel dans chaque section */
+}
+
+/* Images */
+.foot img {
+  height: 100vh;
+  /* Prend toute la hauteur de la fenêtre */
+  width: auto;
+  /* Garde les proportions de l'image */
+  display: block;
 }
 
 .C {
@@ -258,5 +292,3 @@ padding-left: 5em;
 .B {
   background-color: #eaeaea;
 }
-
-
