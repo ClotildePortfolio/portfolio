@@ -1,0 +1,146 @@
+<html lang="en">
+
+<head>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <link rel="stylesheet" href="../style.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clo</title>
+</head>
+
+<body>
+    <div class="row animate__backInLeft">
+        <div class="section u-full-width">
+            <img src="first.png" alt="">
+        </div>
+        <div class="section B pd-r-5">
+            <img src="book1.png" alt="">
+        </div>
+        <div class="section B">
+            <img src="book2.png" alt="">
+        </div>
+        <div class="section B">
+            <img src="book3.png" alt="">
+        </div>
+        <div class="section B">
+            <img src="book4.png" alt="">
+        </div>
+        <div class="section B">
+            <img src="book5.png" alt="">
+        </div>
+        <div class="section B">
+            <img src="book6.png" alt="">
+        </div>
+        <div class="section B">
+            <img src="book7.png" alt="">
+        </div>
+        <div class="section B">
+            <img src="book8.png" alt="">
+        </div>
+        <div class="section B">
+            <img src="book9.png" alt="">
+        </div>
+        <div class="section B">
+            <img src="book10.png" alt="">
+        </div>
+        <div class="section B">
+            <img src="book11.png" alt="">
+        </div>
+        <div class="section B">
+            <img src="book12.png" alt="">
+        </div>
+        <div class="section B">
+            <img src="book13.png" alt="">
+        </div>
+        <div class="section B">
+            <img src="book14.png" alt="">
+        </div>
+        <div class="section A">
+            <img src="book15.png" alt="">
+        </div>
+        <div class="section A">
+            <img src="book16.png" alt="">
+        </div>
+        <div class="section A">
+            <img src="book17.png" alt="">
+        </div>
+        <div class="section A">
+            <img src="book18.png" alt="">
+        </div>
+        <div class="section A">
+            <img src="book19.png" alt="">
+        </div>
+        <div class="section A">
+            <img src="book20.png" alt="">
+        </div>
+        <div class="section A">
+            <img src="book21.png" alt="">
+        </div>
+        <div class="section A">
+            <img src="book22.png" alt="">
+        </div>
+        <div class="section A">
+            <img src="book23.png" alt="">
+        </div>
+        <div class="section A">
+            <img src="book24.png" alt="">
+        </div>
+        <div class="section A">
+            <img src="book25.png" alt="">
+        </div>
+        <div class="section A">
+            <img src="book26.png" alt="">
+        </div>
+        <div class="section A">
+            <img src="book27.png" alt="">
+        </div>
+        <div class="section A">
+            <img src="book28.png" alt="">
+        </div>
+        <div class="section A">
+            <img src="book29.png" alt="">
+        </div>
+        <div class="section A">
+            <img src="book30.png" alt="">
+        </div>
+        <div class="section A">
+            <img src="book31.png" alt="">
+        </div>
+        <div class="section A">
+            <img src="book32.png" alt="">
+        </div>
+        <div class="section u-full-width">
+            <img src="last.png" alt="">
+        </div>
+    </div>
+
+    <div class="zoom-circle" id="zoom-circle"></div>
+
+
+    <script type="text/javascript">
+
+        // Désactiver le clic droit
+        document.addEventListener('contextmenu', event => event.preventDefault());
+
+        document.querySelector('.row').addEventListener('wheel', (event) => {
+            if (event.deltaY !== 0) {
+                event.preventDefault();
+                // Multipliez event.deltaY par un facteur pour augmenter la vitesse
+                const scrollSpeed = 4; // Vous pouvez ajuster ce facteur
+                document.querySelector('.row').scrollLeft += (event.deltaY + event.deltaX) * scrollSpeed;
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>
